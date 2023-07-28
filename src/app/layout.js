@@ -10,9 +10,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logo-dark.svg" />
+        <link rel="icon" href="/lg.png" />
         <link rel='manifest' href='/manifest.json' />
-        <link rel='apple-touch-icon' href='/logo-dark.svg' />
+        <link rel='apple-touch-icon' href='/lg.png' />
         <meta name="theme-color" content="#030712" />
         <meta name="msapplication-navbutton-color" content="#030712" />
         <meta name="apple-mobile-web-app-status-bar-style" content="##030712" />
