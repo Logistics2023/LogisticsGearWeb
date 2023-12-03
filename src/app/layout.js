@@ -6,7 +6,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
-  
+
   return (
     <html lang="en">
       <head>
@@ -21,13 +21,18 @@ export default function RootLayout({ children }) {
         <meta name="author" content="Logistics Gear" />
         <title>Logistics</title>
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} 
+      // style={{
+      //       backgroundImage: 'url(/bg.png)',
+      //       backgroundRepeat: 'no-repeat',
+      //       backgroundPosition: 'center',
+      //       backgroundAttachment: 'fixed',
+      //       backgroundSize: 'cover'
+      //     }}
+          >
         <UserProvider>
-     
-          <main className='h-screen'>
-
-
-            {children}
+          <main className='min-h-screen bg-gradient-to-t from-[#00061880] to-[#000618d1]'>   
+              {children}
           </main>
         </UserProvider>
       </body>

@@ -4,8 +4,8 @@ import Loader from '@/components/Loader'
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation';
 import { useUser } from '@/context/Context.js'
-import { readUserData} from '@/supabase/utils'
-import { onAuth } from '@/supabase/utils'
+import { readUserData} from '@/firebase/utils'
+import { onAuth } from '@/firebase/utils'
 
 export function WithAuth(Component) {
     return () => {

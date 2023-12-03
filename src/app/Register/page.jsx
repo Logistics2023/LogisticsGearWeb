@@ -1,5 +1,5 @@
 'use client'
-import { writeUserData, readUserData } from '@/supabase/utils'
+import { writeUserData, readUserData } from '@/firebase/utils'
 import { useUser } from '@/context/Context'
 import Image from 'next/image'
 import Link from 'next/link'

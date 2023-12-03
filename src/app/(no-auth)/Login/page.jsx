@@ -1,6 +1,6 @@
 'use client'
 import { useUser } from '@/context/Context'
-import { onAuth, signInWithEmailAndPassword } from '@/supabase/utils'
+import { onAuth, signInWithEmailAndPassword } from '@/firebase/utils'
 import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
