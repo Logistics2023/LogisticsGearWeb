@@ -2,6 +2,7 @@
 import { UserProvider } from '../context/Context'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Navbar from '@/components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,6 +32,8 @@ export default function RootLayout({ children }) {
       //     }}
           >
         <UserProvider>
+        <Navbar></Navbar>
+
           <main className='min-h-screen bg-gradient-to-t from-[#00061880] to-[#000618d1]'>   
               {children}
           </main>

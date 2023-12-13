@@ -26,30 +26,20 @@ export default function BottomNavigation({ rol }) {
             ? setNavItem('')
             : setNavItem(item)
     }
-  
     const controlNavbar = () => {
-      if (typeof window !== 'undefined') { 
-        if (window.scrollY > lastScrollY) { 
-          setShow(false); 
-        } else { 
-          setShow(true);  
+        if (window.scrollY > lastScrollY) {
+            setShow(false);
+        } else {
+            setShow(true);
         }
-          setLastScrollY(window.scrollY); 
-      }
+        setLastScrollY(window.scrollY);
     };
-  
     useEffect(() => {
-      if (typeof window !== 'undefined') {
         window.addEventListener('scroll', controlNavbar);
-
-        return () => {
-          window.removeEventListener('scroll', controlNavbar);
-        };
-      }
-    }, [lastScrollY]);
-
+        return () => window.removeEventListener('scroll', controlNavbar);
+    }, [lastScrollY, show]);
     return <>
-        <nav class={`fixed  w-screen bg-[#01A7EB] lg:border-gray-200 transition-all  z-40 ${show ? 'top-0': 'top-[-100px]'}`}>
+        <nav class={`fixed  w-screen  lg:border-gray-200 transition-all  z-40 ${show ? 'top-0' : 'top-[-100px]'}`}>
             <div class="w-screen flex flex-wrap items-center justify-between lg:border-b-[2px] lg:border-gray-50 mx-auto py-4 px-4 lg:px-8">
                 <Link href="/" class="flex items-center">
                     <img src="/logo.svg" class="h-[50px] mr-3" alt="Flowbite Logo" />

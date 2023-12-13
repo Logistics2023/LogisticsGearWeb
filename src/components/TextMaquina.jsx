@@ -13,7 +13,7 @@ const TextMaquina = () => {
         1000,
       ]}
       wrapper="span"
-      speed={80}
+      speed={40}
       style={{ fontSize: '16px', display: 'inline-block', color: 'white' }}
       repeat={Infinity}
     />

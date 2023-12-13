@@ -7,10 +7,7 @@ import Link from 'next/link'
 import Button from '@/components/Button'
 import Subtitle from '@/components/Subtitle'
 import Error from '@/components/Error'
-import Video from '@/components/Video'
 import { services } from '@/db'
-import { Player } from 'video-react';
-import ReactPlayer from 'react-player'
 import Tag from '@/components/Tag'
 import Service from '@/components/Service'
 import TextMaquina from '@/components/TextMaquina'
@@ -51,19 +48,32 @@ export default function Home() {
       {/* <AwesomeSlider className='relative' play={true} interval={6000}> */}
 
 
-        <section className='min-h-[90vh]  py-[50px]  w-full lg:pt-10 pb-0 flex flex-col justify-around lg:flex-row items-center '
-        style={{
-          backgroundImage: `url(/bg-mobil.png)`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center bottom 30px',
-          backgroundAttachment: 'fixed',
-          backgroundSize: 'cover'
-        }}
-        >       
-           <img src='/logo.svg' className='w-[80vw] h-auto flex justify-center items-end lg:w-[50vw] lg:h-[100vh]' />
-           <TextMaquina/>
-{/* 
-          <AutoplaySlider className='relative bg-transparent' play={true} interval={6000} buttons={false} bullets={false}>
+      <section className=' bg-black'
+      // style={{
+      //   backgroundImage: `url(/bg-mobil.png)`,
+      //   backgroundRepeat: 'no-repeat',
+      //   backgroundPosition: 'center bottom 30px',
+      //   backgroundAttachment: 'fixed',
+      //   backgroundSize: 'cover'
+      // }}
+      >
+        {/* <video className='absolute top-0 w-full h-[100vh] object-cover object-bottom' autoPlay loop muted>
+            <source src="/underwater.mp4" type="video/mp4" />
+          </video> */}
+        {/* <div className='relative min-h-[100vh] py-[50px] w-full lg:pt-10 pb-0 flex flex-col justify-around lg:flex-row items-center z-20' style={{background: '-gradient(to bottom, rgba(0, 6, 24, 0.87), #061A4D79)'}}> */}
+        <video className='fixed bottom-0 w-full h-[100vh] pb-[25px] object-cover object-bottom' autoPlay loop muted>
+          <source src="/bg.mp4" type="video/mp4" />
+        </video>
+        <div className='relative min-h-[100vh] py-[50px] w-full lg:pt-10 pb-0 flex flex-col justify-around lg:flex-row items-center shadow-black shadow-2xl  z-20' style={{ background: '-gradient(to bottom, #000000,  #000000c7, #00000050' }}>
+
+
+          <video className='relative top-[-65px] w-[100vw] h-[100vw] object-cover   rounded-b-[20px]' autoPlay loop muted>
+            <source src="/logo.mp4" type="video/mp4" />
+          </video>
+
+          {/* <img src='/logo.svg' className='inline-block w-[50vw] h-[50vw] bg-white  lg:flex justify-center items-end lg:w-[50vw] lg:h-[100vh] rounded-full shadow-sm shadow-white' /> */}
+
+          {/* <AutoplaySlider className='relative bg-transparent' play={true} interval={6000} buttons={false} bullets={false}>
           <div className=' bg-[#01A7EB]'>
             </div>
 
@@ -81,7 +91,9 @@ export default function Home() {
 
 
           </AutoplaySlider> */}
- {/* {
+          <TextMaquina />
+
+          {/* {
               services.map((i, index) =>
                 <div key={index}>
                   <Service i={i} index={index}></Service>
@@ -94,11 +106,11 @@ export default function Home() {
             } */}
           <div className='bg-transparent flex justify-center flex-wrap px-5 py-10 pb-[200px]'>
 
-            <Tag theme='Transparent'>Transporte Terrestre</Tag>
-            <Tag theme='Transparent'>Transporte Maritimo</Tag>
-            <Tag theme='Transparent'>Transporte Aereo</Tag>
-            <Tag theme='Transparent'>Despacho Aduanero</Tag>
-            <Tag theme='Transparent'>Carga Proyecto</Tag>
+            <Tag theme='Primary'>Transporte Terrestre</Tag>
+            <Tag theme='Primary'>Transporte Maritimo</Tag>
+            <Tag theme='Primary'>Transporte Aereo</Tag>
+            <Tag theme='Primary'>Despacho Aduanero</Tag>
+            <Tag theme='Primary'>Carga Proyecto</Tag>
 
           </div>
 
@@ -117,27 +129,34 @@ export default function Home() {
             <Link href={`https://api.whatsapp.com/send?phone=+59169941749&text=Hola%20Dental%20House,%20quisiera%20hacer%20una%20consulta...%20`} className='w-full'><Button theme="Primary" >Contactar</Button></Link>
           </div>
         </div> */}
-        </section>
+        </div>
+
+      </section>
 
 
-        <section className='w-full bg-[#01A7EB] pt-[70px]' id="Servicios">
+      <section className='w-full bg-[#4f8cc5]' id="Servicios">
+        <div className='relative min-h-screen w-full flex flex-col  lg:flex-row justify-around items-center '>
           <Subtitle>Servicios</Subtitle>
-          <div className='min-h-screen w-full flex flex-col  lg:flex-row justify-around items-center '>
-            <ul className='min-w-[80%] grid grid-cols-1 gap-4'>
-              {
-                services.map((i, index) =>
-                  <div key={index}>
-                    <Service i={i} index={index}></Service>
-                    <div className="inline-flex items-center justify-center w-full">
-                      <hr className="w-64 h-px my-8 bg-[#9EC011] border-0 dark:bg-gray-700" />
-                      <span className="absolute px-3 font-medium text-[#0090A8] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
-                    </div>
+
+          <video className='absolute top-0  w-full h-[80vh] object-cover' autoPlay loop muted>
+            <source src="/highway2.mp4" type="video/mp4" />
+          </video>
+
+          <ul className='min-w-[80%] grid grid-cols-1 gap-4'>
+            {
+              services.map((i, index) =>
+                <div key={index}>
+                  <Service i={i} index={index}></Service>
+                  <div className="inline-flex items-center justify-center w-full">
+                    <hr className="w-64 h-px my-8 bg-[#9EC011] border-0 dark:bg-gray-700" />
+                    <span className="absolute px-3 font-medium text-[#0090A8] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
                   </div>
-                )
-              }
-            </ul>
-          </div>
-        </section>
+                </div>
+              )
+            }
+          </ul>
+        </div>
+      </section>
 
 
 

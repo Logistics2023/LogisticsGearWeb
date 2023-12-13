@@ -51,8 +51,7 @@ function Home({ children }) {
   console.log(userDB)
 
   return (
-    <div className="relative min-h-screen">
-      <Navbar />
+    <div className="relative">
       <main className={`relative min-w-screen  lg:pb-0  lg:min-w-auto my-[0px]   lg:min-h-screen  ${nav ? 'w-screen pl-[100vw]  ' : '  lg:px-[0px]'}`} onClick={() => setNav(false)} style={{ transition: 'all 0.5' }}>
         {children}
           <BottomNavigation/>

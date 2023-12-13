@@ -1,17 +1,26 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {}
-
-// module.exports = nextConfig
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
-  }
-  
-  const withPWA = require('next-pwa')({
-    dest: 'public'
-  })
-  
-  module.exports = withPWA({
-    nextConfig
-  })
+const nextConfig = {}
+
+module.exports = nextConfig
+
+
+
+// module.exports = {
+//     experimental: {
+//       turbo: {
+//         rules: {
+//           // Option format
+//           '*.md': [
+//             {
+//               loader: '@mdx-js/loader',
+//               options: {
+//                 format: 'md',
+//               },
+//             },
+//           ],
+//           // Option-less format
+//           '*.mdx': ['@mdx-js/loader'],
+//         },
+//       },
+//     },
+//   }
