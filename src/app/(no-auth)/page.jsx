@@ -67,7 +67,7 @@ export default function Home() {
         <div className='relative min-h-[100vh] py-[50px] w-full lg:pt-10 pb-0 flex flex-col justify-around lg:flex-row items-center shadow-black shadow-2xl  z-20' style={{ background: '-gradient(to bottom, #000000,  #000000c7, #00000050' }}>
 
 
-          <video className='relative top-[-75px] w-[100vw] h-[80vw] object-cover   rounded-b-[50px] pt-[50px] bg-black' autoPlay loop muted>
+          <video className='relative top-[-90px] w-[100vw] h-[80vw] object-cover   rounded-b-[50px] pt-[50px] bg-black' autoPlay loop muted>
             <source src="/logo.mp4" type="video/mp4" />
           </video>
 
