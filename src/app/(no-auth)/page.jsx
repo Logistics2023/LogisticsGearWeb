@@ -138,7 +138,7 @@ export default function Home() {
         <div className='relative min-h-screen w-full flex flex-col  lg:flex-row justify-around items-center '>
           <Subtitle>Servicios</Subtitle>
 
-          <video className='absolute top-0  w-full h-[80vh] object-cover' autoPlay loop muted>
+          <video className='absolute top-0  w-full h-[100vh] object-cover' autoPlay loop muted>
             <source src="/highway2.mp4" type="video/mp4" />
           </video>
 
