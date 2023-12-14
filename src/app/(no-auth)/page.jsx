@@ -61,7 +61,7 @@ export default function Home() {
             <source src="/underwater.mp4" type="video/mp4" />
           </video> */}
         {/* <div className='relative min-h-[100vh] py-[50px] w-full lg:pt-10 pb-0 flex flex-col justify-around lg:flex-row items-center z-20' style={{background: '-gradient(to bottom, rgba(0, 6, 24, 0.87), #061A4D79)'}}> */}
-        <video className='fixed bottom-0 w-full h-[100vh] pb-[25px] object-cover object-bottom' autoPlay loop muted>
+        <video className='fixed bottom-0 w-full h-[100vh] pb-[10px] object-cover object-bottom' autoPlay loop muted>
           <source src="/bg.mp4" type="video/mp4" />
         </video>
         <div className='relative min-h-[100vh] py-[50px] w-full lg:pt-10 pb-0 flex flex-col justify-around lg:flex-row items-center shadow-black shadow-2xl  z-20' style={{ background: '-gradient(to bottom, #000000,  #000000c7, #00000050' }}>

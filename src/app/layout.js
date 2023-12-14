@@ -14,9 +14,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/lg.png" />
         <link rel='manifest' href='/manifest.json' />
         <link rel='apple-touch-icon' href='/lg.png' />
-        <meta name="theme-color" content="#030712" />
-        <meta name="msapplication-navbutton-color" content="#030712" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="##030712" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="msapplication-navbutton-color" content="#000000" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#000000" />
         <meta name="description" content="Sistema de Administracion de Clientes y Formularios" />
         <meta name="keywords" content="Logistics Gear" />
         <meta name="author" content="Logistics Gear" />
