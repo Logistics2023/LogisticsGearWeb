@@ -9,9 +9,6 @@ import Input from '@/components/Input'
 import Error from '@/components/Error'
 import BottomNavigation from '@/components/BottomNavigation'
 
-import { Player } from 'video-react';
-import ReactPlayer from 'react-player'
-
 import { useRouter } from 'next/navigation';
 
 
