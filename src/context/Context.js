@@ -33,7 +33,7 @@ export function UserProvider({ children }) {
 	const [play, setPlay] = useState(true)
 	const [sound, setSound] = useState(false)
 	const [introVideo, setIntroVideo] = useState(true)
-
+	const [webScann, setWebScann] = useState(false)
 
 
 
@@ -88,6 +88,8 @@ export function UserProvider({ children }) {
 			sound,
 			videoRef, 
 			navItem, 
+			webScann, 
+			setWebScann,
 			setNavItem,
 			setSound, 
 			setPlay, 
@@ -114,7 +116,7 @@ export function UserProvider({ children }) {
 			setUserSuccess,
 			setUserItem
 		})
-	}, [user, userDB, distributorPDB, productDB, pedidos, item, cart, success, qr, QRurl, recetaDB, filter, filterQR, recetaDBP, nav, temporal, userUuid, modal, msg, tienda, introVideo, play, sound, navItem])
+	}, [user, userDB, distributorPDB, productDB, pedidos, item, cart, success, qr, QRurl, recetaDB, filter, filterQR, recetaDBP, nav, temporal, userUuid, modal, msg, tienda, introVideo, play, sound, navItem, webScann])
 
 	return (
 		<UserContext.Provider value={value} >
